@@ -18,18 +18,19 @@
         <ul class="nav nav-pills">
           <li class="nav-item">              
             <a class="nav-link {% if .view_name  == 'homepage:index' %}active{% endif %}"
-             href="index.html">
+             href="{% url 'homepage:index' %}">
               Главная
             </a> 
           </li>
           <li class="nav-item">
             <a class="nav-link {% if view_name  == 'ice_cream:ice_cream_list' or view_name == 'ice_cream:ice_cream_detail' %}active{% endif %}"
-            href="ice_cream_list.html">
+            href="{% url 'ice_cream:ice_cream_list' %}">
               Каталог мороженого
             </a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if view_name  == 'about:description' %}active{% endif %}" href="description.html">
+            <a class="nav-link {% if view_name  == 'about:description' %}active{% endif %}"
+            href="{% url 'about:description' %}">
               О проекте
             </a> 
           </li>
