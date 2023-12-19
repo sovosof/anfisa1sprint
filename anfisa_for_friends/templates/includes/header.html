@@ -1,22 +1,4 @@
 {% load static %}
-<header>
-  <img src="{% static 'img/logo.png' %}" height="50" alt="">
-  <nav>
-    <ul>
-      <li>
-        <a href="{% url 'homepage:index' %}">Главная</a>  
-      </li>
-      <li>
-        <a href="{% url 'ice_cream:ice_cream_list' %}">Каталог мороженого</a>       
-      </li>
-      <li>
-        <a href="{% url 'about:description' %}">О проекте</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
 {% with request.resolver_match.view_name as view_name %}
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
